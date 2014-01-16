@@ -1,0 +1,310 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12359,        300]
+NotebookOptionsPosition[     12040,        284]
+NotebookOutlinePosition[     12384,        299]
+CellTagsIndexPosition[     12341,        296]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"e", "=", "0.25"}], ",", 
+       RowBox[{"a", "=", "1"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"ParametricPlot", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"a", " ", 
+            RowBox[{"Cos", "[", "u", "]"}]}], ",", 
+           RowBox[{"a", " ", 
+            RowBox[{"Sqrt", "[", 
+             RowBox[{"1", "-", 
+              SuperscriptBox["e", "2"]}], "]"}], 
+            RowBox[{"Sin", "[", "u", "]"}]}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"u", ",", "0", ",", 
+           RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+         RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+         RowBox[{"PlotStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", 
+         RowBox[{"Purple", ",", 
+          RowBox[{"Polygon", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"a", " ", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"\[Phi]", "[", 
+                  RowBox[{
+                   RowBox[{"t", "-", 
+                    FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], "]"}]}], 
+               ",", 
+               RowBox[{"a", " ", 
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{"1", "-", 
+                  SuperscriptBox["e", "2"]}], "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"\[Phi]", "[", 
+                  RowBox[{
+                   RowBox[{"t", "-", 
+                    FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], 
+                 "]"}]}]}], "}"}], ",", 
+             RowBox[{"Sequence", "@@", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"a", " ", 
+                   RowBox[{"Cos", "[", 
+                    RowBox[{"\[Phi]", "[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "v", "-", 
+                    FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], "]"}]}], 
+                  ",", 
+                  RowBox[{"a", " ", 
+                   RowBox[{"Sqrt", "[", 
+                    RowBox[{"1", "-", 
+                    SuperscriptBox["e", "2"]}], "]"}], 
+                   RowBox[{"Sin", "[", 
+                    RowBox[{"\[Phi]", "[", 
+                    RowBox[{
+                    RowBox[{"t", "+", "v", "-", 
+                    FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], 
+                    "]"}]}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"v", ",", "0", ",", 
+                  FractionBox["\[Pi]", "12"], ",", ".04"}], "}"}]}], "]"}]}], 
+             ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"a", " ", 
+                RowBox[{"Cos", "[", 
+                 RowBox[{"\[Phi]", "[", 
+                  RowBox[{"t", ",", "e"}], "]"}], "]"}]}], ",", 
+               RowBox[{"a", " ", 
+                RowBox[{"Sqrt", "[", 
+                 RowBox[{"1", "-", 
+                  SuperscriptBox["e", "2"]}], "]"}], 
+                RowBox[{"Sin", "[", 
+                 RowBox[{"\[Phi]", "[", 
+                  RowBox[{"t", ",", "e"}], "]"}], "]"}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"a", "*", "e"}], ",", "0"}], "}"}]}], "}"}], "]"}], 
+          ",", "\[IndentingNewLine]", "Yellow", ",", 
+          RowBox[{"PointSize", "[", "0.06", "]"}], ",", 
+          RowBox[{"Point", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"a", "*", "e"}], ",", "0"}], "}"}], "]"}], ",", "Green", 
+          ",", 
+          RowBox[{"PointSize", "[", "0.03", "]"}], ",", 
+          RowBox[{"Point", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"a", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"\[Phi]", "[", 
+                RowBox[{"t", ",", "e"}], "]"}], "]"}]}], ",", 
+             RowBox[{"a", " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{"1", "-", 
+                SuperscriptBox["e", "2"]}], "]"}], 
+              RowBox[{"Sin", "[", 
+               RowBox[{"\[Phi]", "[", 
+                RowBox[{"t", ",", "e"}], "]"}], "]"}]}]}], "}"}], "]"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Opacity", "[", ".5", "]"}], ",", "Green", ",", 
+          RowBox[{"PointSize", "[", "0.03", "]"}], ",", 
+          RowBox[{"Point", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"a", " ", 
+              RowBox[{"Cos", "[", 
+               RowBox[{"\[Phi]", "[", 
+                RowBox[{
+                 RowBox[{"t", "-", 
+                  FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], "]"}]}], 
+             ",", 
+             RowBox[{"a", " ", 
+              RowBox[{"Sqrt", "[", 
+               RowBox[{"1", "-", 
+                SuperscriptBox["e", "2"]}], "]"}], 
+              RowBox[{"Sin", "[", 
+               RowBox[{"\[Phi]", "[", 
+                RowBox[{
+                 RowBox[{"t", "-", 
+                  FractionBox["\[Pi]", "12"]}], ",", "e"}], "]"}], "]"}]}]}], 
+            "}"}], "]"}]}], "}"}], "]"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"ImageSize", "\[Rule]", "550"}]}], "]"}]}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", 
+     RowBox[{"2", "\[Pi]"}]}], "}"}], ",", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Phi]", "[", 
+       RowBox[{"t_", ",", "e_"}], "]"}], ":=", 
+      RowBox[{"\[Phi]", "/.", 
+       RowBox[{"FindRoot", "[", 
+        RowBox[{
+         RowBox[{"t", "==", 
+          RowBox[{"\[Phi]", "-", 
+           RowBox[{"e", " ", 
+            RowBox[{"Sin", "[", "\[Phi]", "]"}]}]}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Phi]", ",", 
+           FractionBox["t", 
+            RowBox[{"1", "-", "e"}]]}], "}"}]}], "]"}]}]}], ")"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5819619952977247`*^9, 3.581962141087929*^9}, {
+   3.5819621867779927`*^9, 3.5819623002681513`*^9}, {3.5819623509082227`*^9, 
+   3.581962379648263*^9}, {3.581962412768309*^9, 3.5819624591383743`*^9}, {
+   3.581962558348513*^9, 3.5819626107585864`*^9}, {3.581962861768938*^9, 
+   3.581963014569152*^9}, 3.5819630507992024`*^9, {3.58196342046972*^9, 
+   3.5819634507497625`*^9}, {3.5819634981398287`*^9, 3.581963498529829*^9}, {
+   3.5819635351298804`*^9, 3.5819636051199784`*^9}, {3.581963636000022*^9, 
+   3.5819636740900755`*^9}, {3.581963814780272*^9, 3.581963840710308*^9}, {
+   3.5819638867803726`*^9, 3.581963887050373*^9}, {3.5819639398404474`*^9, 
+   3.5819639659904833`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 3.103915448909843, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 2 Pi}}, Typeset`size$$ = {
+    550., {264., 269.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = False, $CellContext`t$682402$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$682402$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`e$ = 0.25, $CellContext`a$ = 1}, 
+        Show[
+         ParametricPlot[{$CellContext`a$ Cos[$CellContext`u], $CellContext`a$ 
+           Sqrt[1 - $CellContext`e$^2] Sin[$CellContext`u]}, {$CellContext`u, 
+           0, 2 Pi}, Axes -> False, PlotStyle -> Thick], 
+         Graphics[{Purple, 
+           Polygon[{{$CellContext`a$ Cos[
+                $CellContext`\[Phi][$CellContext`t$$ - Pi/
+                 12, $CellContext`e$]], $CellContext`a$ 
+              Sqrt[1 - $CellContext`e$^2] Sin[
+                $CellContext`\[Phi][$CellContext`t$$ - Pi/
+                 12, $CellContext`e$]]}, 
+             Apply[Sequence, 
+              Table[{$CellContext`a$ Cos[
+                  $CellContext`\[Phi][$CellContext`t$$ + $CellContext`v - Pi/
+                   12, $CellContext`e$]], $CellContext`a$ 
+                Sqrt[1 - $CellContext`e$^2] Sin[
+                  $CellContext`\[Phi][$CellContext`t$$ + $CellContext`v - Pi/
+                   12, $CellContext`e$]]}, {$CellContext`v, 0, Pi/12, 
+                0.04}]], {$CellContext`a$ Cos[
+                $CellContext`\[Phi][$CellContext`t$$, $CellContext`e$]], \
+$CellContext`a$ Sqrt[1 - $CellContext`e$^2] Sin[
+                $CellContext`\[Phi][$CellContext`t$$, $CellContext`e$]]}, \
+{$CellContext`a$ $CellContext`e$, 0}}], Yellow, 
+           PointSize[0.06], 
+           Point[{$CellContext`a$ $CellContext`e$, 0}], Green, 
+           PointSize[0.03], 
+           Point[{$CellContext`a$ Cos[
+               $CellContext`\[Phi][$CellContext`t$$, $CellContext`e$]], \
+$CellContext`a$ Sqrt[1 - $CellContext`e$^2] Sin[
+               $CellContext`\[Phi][$CellContext`t$$, $CellContext`e$]]}], 
+           Opacity[0.5], Green, 
+           PointSize[0.03], 
+           Point[{$CellContext`a$ Cos[
+               $CellContext`\[Phi][$CellContext`t$$ - Pi/
+                12, $CellContext`e$]], $CellContext`a$ 
+             Sqrt[1 - $CellContext`e$^2] Sin[
+               $CellContext`\[Phi][$CellContext`t$$ - Pi/
+                12, $CellContext`e$]]}]}], ImageSize -> 550]], 
+      "Specifications" :> {{$CellContext`t$$, 0, 2 Pi}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{601., {324., 329.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>($CellContext`\[Phi][
+        Pattern[$CellContext`t, 
+         Blank[]], 
+        Pattern[$CellContext`e, 
+         Blank[]]] := ReplaceAll[$CellContext`\[Phi], 
+        FindRoot[$CellContext`t == $CellContext`\[Phi] - $CellContext`e 
+          Sin[$CellContext`\[Phi]], {$CellContext`\[Phi], $CellContext`t/(
+          1 - $CellContext`e)}]]; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.5819621260679083`*^9, 3.58196214150793*^9}, 
+   3.5819622607280965`*^9, 3.581962301218153*^9, {3.581962362578239*^9, 
+   3.5819623720982523`*^9}, {3.581962436848343*^9, 3.581962459708375*^9}, {
+   3.5819625593585143`*^9, 3.5819626112785873`*^9}, 3.5819630157391534`*^9, {
+   3.581963051849204*^9, 3.5819630740892353`*^9}, {3.5819634251297264`*^9, 
+   3.581963451379763*^9}, 3.581963500319832*^9, {3.581963536179882*^9, 
+   3.581963546659897*^9}, {3.5819635938299627`*^9, 3.5819636062199802`*^9}, {
+   3.5819636420800304`*^9, 3.5819636759100776`*^9}, {3.581963816160274*^9, 
+   3.58196384181031*^9}, 3.581963887740374*^9}]
+}, Open  ]]
+},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 6895, 171, 280, "Input"],
+Cell[7477, 195, 4547, 86, 670, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

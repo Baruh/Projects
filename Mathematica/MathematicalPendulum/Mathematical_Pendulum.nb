@@ -1,0 +1,243 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      9040,        233]
+NotebookOptionsPosition[      8721,        217]
+NotebookOutlinePosition[      9065,        232]
+CellTagsIndexPosition[      9022,        229]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"length", "=", ".2"}], ",", 
+       RowBox[{"gravity", "=", "50"}], ",", 
+       RowBox[{"\[Phi]0", "=", 
+        RowBox[{"\[Pi]", "/", "6"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"Green", ",", "Dashed", ",", 
+           RowBox[{"Line", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{"-", "0.005"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"0", ",", 
+                RowBox[{
+                 RowBox[{"-", "1.2"}], "length"}]}], "}"}]}], "}"}], "]"}]}], 
+          "}"}], ",", "\[IndentingNewLine]", "Gray", ",", "Thick", ",", 
+         RowBox[{"Line", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"0", ",", 
+              RowBox[{"-", ".01"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"length", "*", 
+               RowBox[{"Sin", "[", 
+                RowBox[{"\[Phi]", "[", 
+                 RowBox[{"t", ",", "gravity", ",", "length", ",", "\[Phi]0"}],
+                  "]"}], "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"-", "length"}], "*", 
+               RowBox[{"Cos", "[", 
+                RowBox[{"\[Phi]", "[", 
+                 RowBox[{"t", ",", "gravity", ",", "length", ",", "\[Phi]0"}],
+                  "]"}], "]"}]}]}], "}"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "Brown", ",", 
+         RowBox[{"Polygon", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", ".2"}], ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{".2", ",", "0"}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{".2", ",", 
+              RowBox[{"-", ".01"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"-", ".2"}], ",", 
+              RowBox[{"-", ".01"}]}], "}"}]}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "Red", ",", 
+         RowBox[{"PointSize", "[", "Large", "]"}], ",", 
+         RowBox[{"Point", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"length", "*", 
+             RowBox[{"Sin", "[", 
+              RowBox[{"\[Phi]", "[", 
+               RowBox[{"t", ",", "gravity", ",", "length", ",", "\[Phi]0"}], 
+               "]"}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"-", "length"}], "*", 
+             RowBox[{"Cos", "[", 
+              RowBox[{"\[Phi]", "[", 
+               RowBox[{"t", ",", "gravity", ",", "length", ",", "\[Phi]0"}], 
+               "]"}], "]"}]}]}], "}"}], "]"}]}], "}"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"-", "1.2"}], "*", "length"}], ",", 
+            RowBox[{"1.2", "*", "length"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"0", ",", 
+            RowBox[{
+             RowBox[{"-", "1.2"}], "*", "length"}]}], "}"}]}], "}"}]}]}], 
+      "]"}]}], "]"}], "\[IndentingNewLine]", ",", 
+   RowBox[{"{", 
+    RowBox[{"t", ",", "0", ",", "6"}], "}"}], ",", "\[IndentingNewLine]", 
+   RowBox[{"Initialization", "\[RuleDelayed]", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"\[Phi]", "[", 
+       RowBox[{"t_", ",", 
+        RowBox[{"g_:", "9.81"}], ",", 
+        RowBox[{"L_:", ".1"}], ",", 
+        RowBox[{"\[Phi]0_:", 
+         RowBox[{"\[Pi]", "/", "6"}]}]}], "]"}], ":=", 
+      RowBox[{"\[Phi]", "/.", 
+       RowBox[{"FindRoot", "[", 
+        RowBox[{
+         RowBox[{"\[Phi]", "\[Equal]", 
+          RowBox[{"\[Phi]0", "*", 
+           RowBox[{"Cos", "[", 
+            RowBox[{
+             RowBox[{"Sqrt", "[", 
+              RowBox[{"g", "/", "L"}], "]"}], "*", "t"}], "]"}]}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"\[Phi]", ",", ".6"}], "}"}]}], "]"}]}]}], ")"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5818441328935623`*^9, 3.5818442073836665`*^9}, {
+  3.5818442466737213`*^9, 3.5818444332039824`*^9}, {3.5818444740140395`*^9, 
+  3.5818449615947223`*^9}, {3.5818450549348526`*^9, 3.581845199275055*^9}, {
+  3.5818452313251*^9, 3.581845340095252*^9}, {3.5818453774253044`*^9, 
+  3.5818454365253873`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`t$$ = 1.4400192260742188`, Typeset`show$$ = 
+    True, Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`t$$], 0, 6}}, Typeset`size$$ = {360., {88., 92.}}, 
+    Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`t$7033$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`t$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`t$$, $CellContext`t$7033$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Module[{$CellContext`length$ = 0.2, $CellContext`gravity$ = 
+         50, $CellContext`\[Phi]0$ = Pi/6}, 
+        Graphics[{{Green, Dashed, 
+           Line[{{0, -0.005}, {0, (-1.2) $CellContext`length$}}]}, Gray, 
+          Thick, 
+          Line[{{0, -0.01}, {$CellContext`length$ Sin[
+               $CellContext`\[Phi][$CellContext`t$$, $CellContext`gravity$, \
+$CellContext`length$, $CellContext`\[Phi]0$]], (-$CellContext`length$) Cos[
+               $CellContext`\[Phi][$CellContext`t$$, $CellContext`gravity$, \
+$CellContext`length$, $CellContext`\[Phi]0$]]}}], Brown, 
+          Polygon[{{-0.2, 0}, {0.2, 0}, {0.2, -0.01}, {-0.2, -0.01}}], Red, 
+          PointSize[Large], 
+          Point[{$CellContext`length$ Sin[
+              $CellContext`\[Phi][$CellContext`t$$, $CellContext`gravity$, \
+$CellContext`length$, $CellContext`\[Phi]0$]], (-$CellContext`length$) Cos[
+              $CellContext`\[Phi][$CellContext`t$$, $CellContext`gravity$, \
+$CellContext`length$, $CellContext`\[Phi]0$]]}]}, 
+         PlotRange -> {{(-1.2) $CellContext`length$, 
+            1.2 $CellContext`length$}, {0, (-1.2) $CellContext`length$}}]], 
+      "Specifications" :> {{$CellContext`t$$, 0, 6}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {147., 152.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>($CellContext`\[Phi][
+        Pattern[$CellContext`t, 
+         Blank[]], 
+        Optional[
+         Pattern[$CellContext`g, 
+          Blank[]], 9.81], 
+        Optional[
+         Pattern[$CellContext`L, 
+          Blank[]], 0.1], 
+        Optional[
+         Pattern[$CellContext`\[Phi]0, 
+          Blank[]], Pi/6]] := ReplaceAll[$CellContext`\[Phi], 
+        FindRoot[$CellContext`\[Phi] == $CellContext`\[Phi]0 
+          Cos[Sqrt[$CellContext`g/$CellContext`L] $CellContext`t], \
+{$CellContext`\[Phi], 0.6}]]; Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.581844323603829*^9, 3.581844333073842*^9}, {
+   3.5818443987939343`*^9, 3.581844428743976*^9}, {3.581844611524232*^9, 
+   3.58184463158426*^9}, {3.5818447140443754`*^9, 3.58184473855441*^9}, {
+   3.5818447697744536`*^9, 3.581844825604532*^9}, {3.581844893244626*^9, 
+   3.5818449621147227`*^9}, 3.581845341515254*^9, {3.5818453784153056`*^9, 
+   3.581845437675389*^9}}]
+}, Open  ]]
+},
+WindowSize->{1350, 633},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"9.0 for Microsoft Windows (64-bit) (November 20, 2012)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 4592, 120, 192, "Input"],
+Cell[5174, 144, 3531, 70, 348, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
