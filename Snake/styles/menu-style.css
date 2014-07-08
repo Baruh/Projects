@@ -1,0 +1,25 @@
+#menu-wrapper {
+	margin: 10px;
+}
+
+.styled-button {
+	background-color: #ed8223;
+	color: #fff;
+	font-family: 'Helvetica Neue',sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border: 0;
+	text-shadow: #C17C3A 0 -1px 0;
+	width: 120px;
+	height: 32px;
+    margin-left: 80px;
+    margin-right: auto;
+} 
+
+.styled-button:hover {
+	color: #25A6E1;
+}
+

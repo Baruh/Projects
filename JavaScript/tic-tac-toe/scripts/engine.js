@@ -98,9 +98,11 @@ var gameEngine = (function () {
 		return false;
 	}
 
-
-
 	function isGameOver(cells) {
+		if (hasWinner(cells)) {
+			return true;
+		}
+
 		for (var i = cells.length - 1; i >= 0; i--) {
 			if (cells[i].type === cellTypeEnum.EMPTY) {
 				return false;
@@ -190,9 +192,8 @@ var gameEngine = (function () {
 
 					if (!isGameOver(self.cells)) {	
 
-						if (!hasWinner(self.cells)) {
-							computerMove(self.cells, self.cellsLayers, self.computer);											
-						} 
+						computerMove(self.cells, self.cellsLayers, self.computer);
+
 						if (hasWinner(self.cells)) {
 							
 							self.renderer.getStageRenderer(self.stage)
@@ -218,5 +219,4 @@ var gameEngine = (function () {
 			return new Engine(renderer, stage);
 		}
 	}
-
 }());

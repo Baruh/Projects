@@ -1,0 +1,12 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+#main-canvas {
+	border-image-slice: 15 15 15 15 fill; 
+	border-image-width: 10px 10px 10px 10px; 
+	border-image-outset: 0px 0px 0px 0px; 
+	border-image-repeat: round round; 
+	border-image-source: url("../images/border-image.png");	
+}
