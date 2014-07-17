@@ -16,3 +16,7 @@ SNAKE_START_POSITION = {
 
 FOOD_RADIUS = 5;
 FOOD_POINTS = 100;
+FOOD_BORDER_PADDING = 20;
+
+IMAGE_GAME_OVER_PATH = 'images/gameover.png';
+IMAGE_APPLE_PATH = 'images/apple.png';

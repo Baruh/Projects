@@ -1,4 +1,5 @@
 var gameCharacters = (function () {
+	'use strict';
 
 	var GameObject = (function() {
 

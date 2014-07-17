@@ -1,4 +1,5 @@
 (function($){
+	'use strict';
 	var game, canvas, contex;
 		
 	// Create the main canvas
@@ -20,7 +21,32 @@
 			initGame();
 		})
 	.appendTo($('#menu-wrapper'));
-		
+	/*
+	$('<div />')
+		.addClass('onoffswitch')
+		.append(
+			$('<input checked>')
+				.attr({
+					'type': 'checkbox',
+					'name': 'onoffswitch',
+					'id': 'myonoffswitch'
+				})
+				.addClass('onoffswitch-checkbox')
+		)
+		.append(
+			$('<label />')
+				.attr({
+					'for': 'myonoffswitch'
+				})
+				.addClass('onoffswitch-label')
+				.append('<span />')
+					.addClass('onoffswitch-inner')
+				.append('<span />')
+					.addClass('onoffswitch-switch')
+				
+		)
+		.appendTo($('#menu-wrapper'));
+   */
 	canvas = document.getElementById('main-canvas');
 	contex = canvas.getContext('2d');
 

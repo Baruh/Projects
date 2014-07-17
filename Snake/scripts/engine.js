@@ -1,4 +1,5 @@
-var engine = (function($) {	
+var engine = (function($) {
+	'use strict';	
 	var snake, food, renderer, fieldWidth, fieldHeight, image, initEngine, score,
 		audioPlayer = audioDirector.createAudioEngine(),
 		isGameOver = false;
@@ -45,7 +46,7 @@ var engine = (function($) {
 	}
 
 	function hasCrossHerself() {
-		var snakeHead = snake.getHead();
+		var i, distance, snakeHead = snake.getHead();
 		
 		for (i = 1; i < snake.size; i += 1) {
 			distance = findDistanceBetweenCentres(snake.body[i], snakeHead);
@@ -66,8 +67,8 @@ var engine = (function($) {
 		// It is necessary, because otherwise we can hit the snake
 		while (true) {
 			position = {
-				x: getRandomInt(BORDER_WIDTH, fieldWidth - BORDER_WIDTH),
-				y: getRandomInt(BORDER_WIDTH, fieldHeight - BORDER_WIDTH)
+				x: getRandomInt(FOOD_BORDER_PADDING, fieldWidth - FOOD_BORDER_PADDING),
+				y: getRandomInt(FOOD_BORDER_PADDING, fieldHeight - FOOD_BORDER_PADDING)
 			};
 
 			food = gameCharacters.createFood(position.x, position.y, FOOD_RADIUS, FOOD_POINTS);
@@ -117,6 +118,7 @@ var engine = (function($) {
 	function initEngine(canvas) {
 		clearAllIntervals();
 		audioPlayer.stop('death'); // if the engine is aready init
+		audioPlayer.stop('theme');
 		audioPlayer.play('theme');
 		score = 0;
 		fieldWidth = canvas.width - BORDER_WIDTH;

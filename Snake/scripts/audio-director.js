@@ -1,9 +1,10 @@
 var audioDirector = (function() {
+	'use strict';
 
 	var AudioEngine = (function() {
 
 		// Hidden variables and functions
-		var basicThemePath = 'audio/basic_background.mp3',
+		var basicThemePath = 'audio/snake_game_main_theme.mp3',
 			eatSoundPath = 'audio/coin.wav',
 			deathSoundPath = 'audio/game_over.mp3';
 			
@@ -14,7 +15,8 @@ var audioDirector = (function() {
 		};
 
 		function AudioEngine() {		
-			this._basicTheme = new Audio(basicThemePath);
+			this._basicTheme = new Audio(basicThemePath);			
+		   this._basicTheme.loop = true;
 			this._eatSound = new Audio(eatSoundPath);
 			this._deathSound = new Audio(deathSoundPath);
 		}

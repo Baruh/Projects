@@ -1,5 +1,10 @@
 var renderers = (function () {
-	
+	'use strict';
+
+	// Hidden variables
+	var appleImage = new Image();
+	appleImage.src = IMAGE_APPLE_PATH;
+
 	var CanvasRenderer = (function() {
 
 		function CanvasRenderer(canvas) {
@@ -16,7 +21,7 @@ var renderers = (function () {
 			if (element instanceof gameCharacters.SnakeType) {
 				drawSnake(this.ctx, element);
 			} else if (element instanceof gameCharacters.FoodType) {
-				drawFood(this.ctx, element);
+				drawFood(this.ctx, element, 'coin');
 			}
 		};
 
@@ -27,8 +32,8 @@ var renderers = (function () {
 			image.onload = function() {
 				self.ctx.drawImage(image, 100, 150);
 			};
-			image.src = imagePath || 'images/gameover.png';
-			
+
+			image.src = imagePath || IMAGE_GAME_OVER_PATH;			
 		};
 
 		CanvasRenderer.prototype.drawScore = function(score) {
@@ -92,7 +97,20 @@ var renderers = (function () {
 		ctx.fillStyle = oldFillStyle;
 	}
 
-	function drawFood(ctx, element) {		
+	function drawFood(ctx, element, foodType) {
+		foodType = foodType || 'coin';
+
+		switch (foodType) {
+			case 'coin':
+				drawCoin(ctx, element);
+				break;
+			case 'apple':
+				drawAppleSprite(ctx, element);
+				break;
+		}
+	}
+
+	function drawCoin(ctx, element) {		
 		var oldFillStyle = ctx.fillStyle,
 			oldStrokeStyle = ctx.strokeStyle;
 
@@ -101,6 +119,10 @@ var renderers = (function () {
 		ctx.fillStyle = 'orange';
 		ctx.fill();	
 		ctx.fillStyle = oldFillStyle;
+	}
+
+	function drawAppleSprite(ctx, element) {
+		ctx.drawImage(appleImage, 0, 0, 13, 15, element.x - 6.5, element.y - 6.5, 13, 13);		
 	}
 
 	return {
