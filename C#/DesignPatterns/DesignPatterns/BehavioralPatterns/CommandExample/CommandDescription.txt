@@ -1,0 +1,3 @@
+﻿Command design pattern encapsulate a request as an object, thereby letting you 
+parameterize clients with different request, queue or log request, and support
+undoable operations.

@@ -1,0 +1,2 @@
+﻿Iterator in c# give use opportunity to use foreach loop. In out example above we
+used IEnumerator from the .NET to made our CustomList (Linked List) foreachable. 

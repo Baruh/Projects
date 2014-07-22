@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{1CFA0FBE-88EF-4BE6-9576-218672785FC2}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UMLPatterns", "Singleton\UMLPatterns.modelproj", "{7F28659D-8A01-4804-8E83-20A238F6643D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UMLS", "UMLS", "{697C17A5-CA86-4DBD-BE2F-F3AA10E6918D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1CFA0FBE-88EF-4BE6-9576-218672785FC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFA0FBE-88EF-4BE6-9576-218672785FC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFA0FBE-88EF-4BE6-9576-218672785FC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFA0FBE-88EF-4BE6-9576-218672785FC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F28659D-8A01-4804-8E83-20A238F6643D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F28659D-8A01-4804-8E83-20A238F6643D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F28659D-8A01-4804-8E83-20A238F6643D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F28659D-8A01-4804-8E83-20A238F6643D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7F28659D-8A01-4804-8E83-20A238F6643D} = {697C17A5-CA86-4DBD-BE2F-F3AA10E6918D}
+	EndGlobalSection
+EndGlobal

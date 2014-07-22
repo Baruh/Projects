@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1CFA0FBE-88EF-4BE6-9576-218672785FC2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DesignPatterns</RootNamespace>
+    <AssemblyName>DesignPatterns</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Platform.Invoke">
+      <HintPath>..\packages\Platform.Invoke.1.0.4.0\lib\net45\Platform.Invoke.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityExample\QuickSort.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityExample\SelectionSort.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityExample\Sort.cs" />
+    <Compile Include="BehavioralPatterns\ChainOfResponsibilityExample\SortCombiner.cs" />
+    <Compile Include="BehavioralPatterns\CommandExample\Calculator.cs" />
+    <Compile Include="BehavioralPatterns\CommandExample\CalculatorCommand.cs" />
+    <Compile Include="BehavioralPatterns\CommandExample\Engineer.cs" />
+    <Compile Include="BehavioralPatterns\CommandExample\ICommand.cs" />
+    <Compile Include="BehavioralPatterns\CSharpIteratorExample\Alphabet.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\Context.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\Expression.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\HundredExpression.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\OneExpression.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\TenExpression.cs" />
+    <Compile Include="BehavioralPatterns\InterpreterExample\ThousandExpression.cs" />
+    <Compile Include="BehavioralPatterns\IteratorExample\CustomList.cs" />
+    <Compile Include="BehavioralPatterns\MediatorExample\Call.cs" />
+    <Compile Include="BehavioralPatterns\MediatorExample\Client.cs" />
+    <Compile Include="BehavioralPatterns\MediatorExample\ITelephoneDispatcher.cs" />
+    <Compile Include="BehavioralPatterns\MediatorExample\VivacomDispatcher.cs" />
+    <Compile Include="BehavioralPatterns\MementoExample\Adder.cs" />
+    <Compile Include="BehavioralPatterns\MementoExample\Memento.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\ISchoolPsychologist.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\RandomSchoolInitializer.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\SchoolPsyhologist.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\School.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\Student.cs" />
+    <Compile Include="BehavioralPatterns\ObserverExample\WeakStudent.cs" />
+    <Compile Include="BehavioralPatterns\StateExample\Engine.cs" />
+    <Compile Include="BehavioralPatterns\StateExample\EngineState.cs" />
+    <Compile Include="BehavioralPatterns\StateExample\StandardState.cs" />
+    <Compile Include="BehavioralPatterns\StateExample\TurboState.cs" />
+    <Compile Include="BehavioralPatterns\StrategyExample\AirAttack.cs" />
+    <Compile Include="BehavioralPatterns\StrategyExample\General.cs" />
+    <Compile Include="BehavioralPatterns\StrategyExample\IAttackStrategy.cs" />
+    <Compile Include="BehavioralPatterns\StrategyExample\LandAttack.cs" />
+    <Compile Include="BehavioralPatterns\StrategyExample\SeaAttack.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethodExample\Margherita.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethodExample\Pepperoni.cs" />
+    <Compile Include="BehavioralPatterns\TemplateMethodExample\Pizza.cs" />
+    <Compile Include="BehavioralPatterns\VisitorExample\HealthBonusesVisitor.cs" />
+    <Compile Include="BehavioralPatterns\VisitorExample\Person.cs" />
+    <Compile Include="BehavioralPatterns\VisitorExample\IVisitor.cs" />
+    <Compile Include="BehavioralPatterns\VisitorExample\ShopAssistant.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\BalkanMotor.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\BerlinVehicleFactory.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\BurgasVehicleFactory.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\Kawasaki.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\Trabant.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\VehicleFactory.cs" />
+    <Compile Include="CreationalPatterns\AbstractFactoryExample\Motor.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\GameConsole.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\GameConsolePartsEnums.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\IGameConsoleBuilder.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\Manufacturer.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\PlayStationBuilder.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\SegaBuilder.cs" />
+    <Compile Include="CreationalPatterns\BuilderExample\XBoxBuilder.cs" />
+    <Compile Include="CreationalPatterns\FactoryExample\Audi.cs" />
+    <Compile Include="CreationalPatterns\FactoryExample\Car.cs" />
+    <Compile Include="CreationalPatterns\FactoryExample\CarManufacturer.cs" />
+    <Compile Include="CreationalPatterns\FactoryExample\GermanManufacturer.cs" />
+    <Compile Include="CreationalPatterns\FactoryExample\TurkishManufacturer.cs" />
+    <Compile Include="CreationalPatterns\ObjectPoolExample\Army.cs" />
+    <Compile Include="CreationalPatterns\ObjectPoolExample\IRecyclable.cs" />
+    <Compile Include="CreationalPatterns\ObjectPoolExample\Military.cs" />
+    <Compile Include="CreationalPatterns\LazyLoadingExample\BigClass.cs" />
+    <Compile Include="CreationalPatterns\LazyLoadingExample\CustomerLazy.cs" />
+    <Compile Include="CreationalPatterns\PrototypeExample\IPrototype.cs" />
+    <Compile Include="CreationalPatterns\PrototypeExample\JohnDoe.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\AnimalFactory.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\AnimalType.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\Dog.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\IAnimal.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\Lion.cs" />
+    <Compile Include="CreationalPatterns\SimpleFactoryExample\Ostrich.cs" />
+    <Compile Include="CreationalPatterns\SingletonExample\Error.cs" />
+    <Compile Include="CreationalPatterns\SingletonExample\Logger.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StructuralPatterns\AdapterExample\Banana.cs" />
+    <Compile Include="StructuralPatterns\AdapterExample\BananaAdapter.cs" />
+    <Compile Include="StructuralPatterns\AdapterExample\IBanana.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\Certificate.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\Diploma.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\IDocument.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\PageFormat.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\PageA3.cs" />
+    <Compile Include="StructuralPatterns\BridgeExample\PageA4.cs" />
+    <Compile Include="StructuralPatterns\CompositeExample\CityHallEmployee.cs" />
+    <Compile Include="StructuralPatterns\CompositeExample\GovernmentEmployee.cs" />
+    <Compile Include="StructuralPatterns\CompositeExample\Director.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\Burger.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\DonkeyBurger.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\ISandwich.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\Ketchup.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\MayonnaiseDecorator.cs" />
+    <Compile Include="StructuralPatterns\DecoratorExample\SandwichDecorator.cs" />
+    <Compile Include="StructuralPatterns\FacadeExample\IniFile.cs" />
+    <Compile Include="StructuralPatterns\FlyweightExample\Shape.cs" />
+    <Compile Include="StructuralPatterns\FlyweightExample\Rectangle.cs" />
+    <Compile Include="StructuralPatterns\FlyweightExample\ShapeFactory.cs" />
+    <Compile Include="StructuralPatterns\FlyweightExample\ShapeType.cs" />
+    <Compile Include="StructuralPatterns\FlyweightExample\Triangle.cs" />
+    <Compile Include="StructuralPatterns\ProxyExample\Email.cs" />
+    <Compile Include="StructuralPatterns\ProxyExample\EmailProxy.cs" />
+    <Compile Include="StructuralPatterns\ProxyExample\IEmail.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BehavioralPatterns\ChainOfResponsibilityExample\ChainOfResponsibilityDescription.txt" />
+    <Content Include="BehavioralPatterns\CommandExample\CommandDescription.txt" />
+    <Content Include="BehavioralPatterns\CSharpIteratorExample\IteratorDescription.txt" />
+    <Content Include="BehavioralPatterns\InterpreterExample\InterpreterDescription.txt" />
+    <Content Include="BehavioralPatterns\IteratorExample\IteratorDescription.txt" />
+    <Content Include="BehavioralPatterns\MediatorExample\MediatorDescription.txt" />
+    <Content Include="BehavioralPatterns\MementoExample\MementoDescription.txt" />
+    <Content Include="BehavioralPatterns\ObserverExample\ObserverDescription.txt" />
+    <Content Include="BehavioralPatterns\StateExample\StateDescription.txt" />
+    <Content Include="BehavioralPatterns\StrategyExample\StrategyDescription.txt" />
+    <Content Include="BehavioralPatterns\TemplateMethodExample\TemplateMethodDescription.txt" />
+    <Content Include="BehavioralPatterns\VisitorExample\VisitorDescription.txt" />
+    <Content Include="CreationalPatterns\AbstractFactoryExample\AbstractFactoryDescription.txt" />
+    <Content Include="CreationalPatterns\BuilderExample\BuilderDescription.txt" />
+    <Content Include="CreationalPatterns\FactoryExample\FactoryDescription.txt" />
+    <Content Include="CreationalPatterns\LazyLoadingExample\LazyLoadingDescription.txt" />
+    <Content Include="CreationalPatterns\ObjectPoolExample\ObjectPoolDescription.txt" />
+    <Content Include="CreationalPatterns\PrototypeExample\PrototypeDescription.txt" />
+    <Content Include="CreationalPatterns\SimpleFactoryExample\SimpleFactoryDescription.txt" />
+    <Content Include="CreationalPatterns\SingletonExample\SingletonDescription.txt" />
+    <Content Include="StructuralPatterns\AdapterExample\AdapterDescription.txt" />
+    <Content Include="StructuralPatterns\BridgeExample\BridgeDescription.txt" />
+    <Content Include="StructuralPatterns\CompositeExample\CompositeDescription.txt" />
+    <Content Include="StructuralPatterns\DecoratorExample\DecoratorDescription.txt" />
+    <Content Include="StructuralPatterns\FacadeExample\FacadeDescription.txt" />
+    <Content Include="StructuralPatterns\FlyweightExample\FlyweightDescription.txt" />
+    <Content Include="StructuralPatterns\ProxyExample\ProxyDescription.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

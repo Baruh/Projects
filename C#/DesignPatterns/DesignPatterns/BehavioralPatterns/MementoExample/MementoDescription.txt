@@ -1,0 +1,2 @@
+﻿Memento is design pattern that give as way to keep track of some object
+states and to restor to previous state.

@@ -1,0 +1,3 @@
+﻿Chain of responsibility is design pattern than is used when we want to have chain with more than
+one object and each of these objects give a chance to handle the client request. If the current
+object can't handle the request, it sends it to the next object of the chain. 
