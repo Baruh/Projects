@@ -1,6 +1,0 @@
-FirstName,string
-MiddleName,string
-LastName,string
-Age,int
-FacultyNumber,string
-City,string
