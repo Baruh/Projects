@@ -1,0 +1,27 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#game-wrapper {
+	position: relative;	
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+	border: 5px solid #000;
+	border-radius: 10px;	
+	background: #5FCC3B;
+	-webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#game-wrapper div {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}
+
+#computer-digits-container, .player-digits, #guess-button, #sheep-images-wrapper {
+	margin-top: 40px;
+}

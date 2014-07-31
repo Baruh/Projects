@@ -1,0 +1,74 @@
+#game-sceen {
+	display: none;
+}
+
+#game-wrapper #game-title {
+	position: relative;
+	margin: 50px auto;
+	max-width: 400px;
+	font-size: 50px;
+}
+
+#game-wrapper .menu-buttons {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	max-width: 150px;
+	max-height: 100px;
+	border: 2px solid black;
+	border-radius: 10px;
+	background: orange;
+	font-size: 42px;
+}
+
+#game-wrapper .menu-buttons:hover {	
+	background: black;
+	color: orange; 
+}
+
+#game-wrapper #game-footer {
+	position: absolute;
+	padding: 5px;
+	bottom: 0;
+	right: 0;
+}
+
+#game-login {
+	margin: 150px auto;
+	display: none;
+}
+
+#game-scores {
+	margin: 20px auto;
+	display: none;
+}
+
+#game-scores table, td, th {
+	border-collapse: collapse;
+	border: 3px solid black;
+	text-align: center;
+	font-size: 24px;
+	margin: auto;
+	background: #be301f;
+}
+
+#game-scores table td {
+	color: white;
+}
+
+#game-scores table caption {
+	font-size: 32px;
+}
+
+#username-field {
+	margin: auto;
+	height: 40px;
+	font-size: 32px;
+	max-width: 300px;
+	border-color: #F5CB6F;
+	background: #F5CB6F;
+}
+
+#game-login #username {	
+	font-size: 36px;
+}
