@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'SFFedoraTitles';
+	src: url('sf-fedora-titles.ttf');
+}
+
+#game-credits {
+	margin: 30px auto;
+}
+
+#game-credits h3, #game-highScores h3, #game-help h3 {
+	color: #ffff40;
+	font-family: SFFedoraTitles, Arial;
+	font-size: 3em;
+	text-shadow: 4px 2px 6px rgba(255, 173, 68, 0.94);
+}
+
+#game-help article {
+	padding-left: 100px;
+	padding-right: 100px;
+	color: #1f4367;
+	font-size: 1.75em;
+}
+
+#game-credits footer {
+	font-family: SFFedoraTitles, Arial;
+	font-size: 1.25em;
+	font-style: italic;
+}
+
+#game-credits ul, #game-highScores ul {
+	list-style-type: none;
+}
+
+#game-credits ul li span, #game-highScores ul li span {
+	display: inline-block;
+	color: #fcf9c0;
+	font-family: SFFedoraTitles, Arial;
+	font-size: 1.5em;
+	margin: 0.35em auto;
+	text-align: left;
+}
+
+#game-credits ul li span:first-child, #game-highScores ul li span:first-child { 	
+	display: inline-block;
+ 	color: #1f4367;
+ 	text-align: right;
+ 	margin: 0.35em 0.5em;
+ }
+
+#game-highScores span {
+	display: block;
+   	margin: 0 auto;
+   	width: 210px;
+}

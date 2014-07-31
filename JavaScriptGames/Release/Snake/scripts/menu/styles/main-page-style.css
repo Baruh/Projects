@@ -1,0 +1,20 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+#main-wrapper {
+	position: relative;	
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 500px;
+	border: 10px solid #000;
+	border-radius: 9px;	
+	background: #5FCC3B;
+}
+
+#main-wrapper div {
+	text-align: center;
+	font-family: "Times New Roman", Times, serif;
+}

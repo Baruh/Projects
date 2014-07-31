@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Snake</title>
+	<link rel="stylesheet" type="text/css" href="styles/game-style.css">
+	<link rel="stylesheet" type="text/css" href="scripts/menu/styles/main-page-style.css">
+	<link rel="stylesheet" type="text/css" href="scripts/menu/styles/main-menu-style.css">	
+	<link rel="stylesheet" type="text/css" href="scripts/menu/styles/submenus-style.css">	
+</head>
+<body>
+	<div id="main-wrapper">
+		<div id="sound-button">
+			<img id="image-sound" src="images/sound.png">
+		</div>
+		<div id="game-wrapper"></div>
+		<div id="menu-wrapper">			
+			<div id="game-menu">
+				<div id="game-title">
+					<img id="snake-label-picture" src="scripts/menu/images/snake_logo.png">
+					<img id="snake-picture" src="scripts/menu/images/snake.png">
+				</div>
+				<div class="menu-buttons" id="newgame-button">
+					<span>New Game</span>
+				</div>
+				<div class="menu-buttons" id="highScores-button">
+					<span>High Scores</span>
+				</div>
+				<div class="menu-buttons" id="help-button">
+					<span>Help</span>
+				</div>
+				<div class="menu-buttons" id="credits-button">
+					<span>Credits</span>
+				</div>			
+			</div>		
+			<div id="game-highScores"></div>
+			<div id="game-help"></div>
+			<div id="game-credits"></div>		
+		</div>	
+	</div>	
+	<script src="scripts/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+	<script src="scripts/libs/CanvasInput.min.js" type="text/javascript"></script>
+	<script src="scripts/global-constants.js" type="text/javascript"></script>
+	<script src="scripts/game-characters.js" type="text/javascript"></script>
+	<script src="scripts/renderer.js" type="text/javascript"></script>
+	<script src="scripts/audio-director.js" type="text/javascript"></script>
+	<script src="scripts/engine.js" type="text/javascript"></script>		
+	<script src="scripts/menu/scripts/menu-audio-engine.js" type="text/javascript"></script>
+	<script src="scripts/menu/scripts/score-engine.js" type="text/javascript"></script>
+	<script src="scripts/menu/scripts/menu-engine.js" type="text/javascript"></script>	
+	<script src="scripts/main.js" type="text/javascript"></script>
+</body>
+</html>

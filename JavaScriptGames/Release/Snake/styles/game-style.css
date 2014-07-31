@@ -1,0 +1,17 @@
+#main-canvas {
+	background-color: #FFFFD1;
+}
+
+#sound-button {
+	min-width: 100%;
+}
+
+#image-sound {
+	position: absolute;
+	display: none;
+	padding-top: 2px;
+	padding-right: 10px;
+	top: 0;
+	right: 0;
+	width: 17px;
+}
